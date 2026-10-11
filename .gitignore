@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Tool output written next to the inputs
+/output/
+/results/
+udb_post_results*.csv
+*_param_tmp.sh
+
+# MD trajectories and restarts (too large for git)
+*.dcd
+*.nc
+*.coor
+*.vel
+*.xsc
+
+# Editors and OS
+.vscode/
+.idea/
+.claude/
+.DS_Store
+*.swp
