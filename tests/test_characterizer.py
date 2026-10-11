@@ -103,11 +103,12 @@ def test_pamam_g2_size_and_hydrodynamics(pamam_g2):
 def test_cli_writes_csv_and_units(tmp_path):
     out = tmp_path / 'res.csv'
     cmd = [sys.executable, os.path.join(ROOT, 'udb_characterizer.py'), STRUCT,
-           '--monomer', MONO, '--family', 'PAMAM', '--gen', '2', '-o', str(out),
+           '--monomer', MONO, '--terminal', MONO, '--family', 'PAMAM', '--gen', '2', '-o', str(out),
            '--mc-samples', '5000', '--sasa-points', '120', '--units-row']
     res = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     assert res.returncode == 0, res.stderr
     rows = list(csv.DictReader(open(out, encoding='utf-8')))
     assert rows[0]['Rg_heavy_A'] == 'Å'          # units row
     assert rows[1]['N_atoms'] == '516'
+    assert rows[1]['terminalfrag_n_atoms'] == '20'
     assert (tmp_path / 'res_units.csv').exists()

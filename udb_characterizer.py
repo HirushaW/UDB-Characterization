@@ -1798,6 +1798,14 @@ def cli_main():
                   f"heavy leaves {dict(mono_elems)}")
         except Exception as e:
             print(f"WARNING: could not read monomer: {e}", file=sys.stderr)
+    term_info = None
+    if args.terminal:
+        try:
+            _, _, term_info, _ = analyse_fragment(args.terminal, 'terminalfrag')
+            print(f"Terminal fragment: {term_info['terminalfrag_n_atoms']} atoms, "
+                  f"{term_info['terminalfrag_n_bonds']} bonds")
+        except Exception as e:
+            print(f"WARNING: could not read terminal fragment: {e}", file=sys.stderr)
 
     term_elem, term_src = terminal_element_from_monomer(mono_elems, args.term_el)
     print(f"Terminal : element '{term_elem}'  ({term_src})\n")
@@ -1834,6 +1842,8 @@ def cli_main():
                       f"({row.get('pct_bad_bonds','?')}% bad bonds)", file=sys.stderr)
                 continue
 
+            if term_info:
+                row.update(term_info)
             rows.append(row)
             full[os.path.basename(path)] = rep
 
