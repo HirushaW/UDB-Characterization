@@ -388,9 +388,9 @@ def intrinsic_viscosity(Vh_nm3, MW_Da):
     [eta] = 2.5 * Vh * NA / M   [dL/g]  — Flory–Fox approximation.
     Vh in nm³, MW in Da.
     """
-    Vh_L  = Vh_nm3 * 1e-24     # nm³ → L
+    Vh_dL = Vh_nm3 * 1e-23     # nm³ → dL  (1 nm³ = 1e-24 L = 1e-23 dL)
     M_g   = MW_Da               # g/mol
-    return 2.5 * Vh_L * NA / M_g
+    return 2.5 * Vh_dL * NA / M_g
 
 def molecular_density(MW_Da, V_sphere_ang3):
     """rho = (M / V_sphere) * 1.66054  [g/cm³]."""
