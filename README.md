@@ -1,6 +1,7 @@
 # UDB Characterization Tools
 
 [![CI](https://github.com/HirushaW/UDB-Characterization/actions/workflows/ci.yml/badge.svg)](https://github.com/HirushaW/UDB-Characterization/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](CHANGELOG.md)
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![Platform](https://img.shields.io/badge/platform-Linux-555)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -121,6 +122,7 @@ Parameterization additionally needs [AmberTools25](https://ambermd.org/AmberTool
 | [Parameterization & MOL2 guide](docs/PARAMETERIZATION_AND_MOL2.md) | Pipeline, GAFF2 typing rules, full GAFF2 ↔ Sybyl type map, validation checks |
 | [Worked example](examples/README.md) | PAMAM G2 inputs and reference outputs of both tools, with the commands |
 | [Changelog](CHANGELOG.md) | What changed in each version |
+| [Contributing](CONTRIBUTING.md) | How to report a problem or propose a change |
 
 ## Repository layout
 
