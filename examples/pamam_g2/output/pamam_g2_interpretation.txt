@@ -1,0 +1,117 @@
+Core     : 84 atoms, 83 bonds
+Monomer  : 20 atoms, 19 bonds, heavy leaves {'C': 1, 'O': 1, 'N': 1}
+Terminal : element 'N'  (auto from monomer; TIE between N/O resolved by preference order — override with --terminal-element if wrong)
+
+
+==============================================================================
+  INTERPRETATION - PAMAM G2 (amber_min)
+==============================================================================
+
+  QUALITY
+    Bond lengths are physically sound (0.0% outside 0.85-1.80 A). Geometry
+    is trustworthy.
+
+  TERMINAL
+    All 16 expected terminal groups are present - the dendrimer is complete
+    to this generation.
+
+  RG
+    Root-mean-square spread of the heavy atoms about the centre is 13.922 A
+    (diameter ~35.9 A as an equivalent sphere). Rg is the quantity measured
+    by SAXS/SANS, so this is the most directly comparable size to
+    experiment.
+
+  ASPHERICITY
+    delta = 0.5123 -> markedly elongated, far from spherical. Dendrimers
+    become more spherical as generation rises; a high value at low
+    generation is normal.
+
+  INERTIA
+    Ray's asymmetry kappa = -0.929 -> near-prolate symmetric top - cigar-
+    shaped. (-1 = cigar, 0 = irregular, +1 = disc.) The axis of SMALLEST
+    moment is the molecular long axis, because mass close to an axis resists
+    rotation about it least.
+
+  PRINCIPAL AXIS
+    Mass extends 2.22x further from axis 3 than from axis 1 - axis 1 is the
+    long axis of the molecule. Axes are eigenvectors of the inertia tensor:
+    computed, not chosen. [!] If two moments are within ~15% the
+    corresponding axes are nearly degenerate and their directions are
+    numerically unstable.
+
+  RH
+    Kirkwood-Riseman hydrodynamic radius 11.198 A - the radius of the
+    equivalent sphere that would diffuse at the same rate. This is the
+    quantity measured by DLS.
+
+  RH METHOD
+    The hard-sphere estimate gives 17.973 A, 61% different. The hard-sphere
+    formula sqrt(5/3)*Rg assumes a uniform solid sphere and is unreliable
+    for open or branched structures; prefer the Kirkwood value. D, s and
+    [eta] all inherit this error, and [eta] scales as Rh^3 so it inherits
+    ~3x.
+
+  RG RH
+    Rg/Rh = 1.243 -> open, coil-like architecture (random coil ~1.5). [lit]
+    Reference values: solid sphere 0.775, hollow shell ~1.0, random coil
+    ~1.5. This ratio is a size-independent architecture diagnostic and is
+    obtainable experimentally by combining SAXS with DLS.
+
+  VOID
+    Void fraction 83.95% [conv: bands 60/30/15%] -> very open interior -
+    large capacity for guest molecules. This is the closest structural proxy
+    to drug-loading capacity. [!] It is a static geometric measure: it does
+    not distinguish space a guest molecule could actually occupy from voids
+    too small or fragmented to use.
+
+  DENSITY
+    Molecular density 0.2223 g/cm3 -> low - open, solvent-permeable interior
+    (typical of PAMAM/PLL backbones).
+
+  SURFACE CROWDING
+    216.45 A2 of surface per terminal group -> ample room per terminal
+    group; growth is not yet sterically limited.
+
+  BACKFOLDING
+    Mean terminal radius is 0.975 of the reference radius [conv: bands
+    0.95/0.85] -> terminals sit close to the outer surface - shell-like
+    arrangement. 12.5% of terminals lie in the inner half of the available
+    volume. They span 3.435-22.147 A from the centre (sd 4.348 A); a wide
+    spread is itself the signature of back-folding, since a true shell would
+    be narrow. [lit] Simulation consensus (Lescanec & Muthukumar 1990; Boris
+    & Rubinstein 1996; Murat & Grest 1996) favours a DENSE-CORE structure
+    with terminals distributed through the interior, not the original dense-
+    shell picture of de Gennes & Hervet. Experiment is still split:
+    Topp/Amis SANS placed PAMAM terminals near the periphery, while
+    Ballauff's SANS found them dispersed with a maximum near half-radius.
+
+  CHARGE
+    Net charge -0.0001 e - the structure is electrically neutral as built.
+    Real dendrimers are protonated in solution: PAMAM surface amines carry +
+    charge at physiological pH, interior tertiary amines protonate only
+    below ~pH 6.5. Build explicitly protonated variants to model that.
+
+  DIPOLE
+    Dipole moment 20.557 D. Meaningful (origin-independent) only because the
+    net charge is ~0. Large values indicate asymmetric charge distribution
+    across the molecule.
+
+  SURFACE CHARGE
+    Surface charge density -0.00412 e/A2. [!] This is NOT a zeta potential
+    and must not be reported as one. Zeta is an electrokinetic property of a
+    solvated, ionised particle and cannot be obtained from a gas-phase
+    structure. Surface charge density is the honest structural analogue, and
+    there is evidence it predicts cytotoxicity better than zeta.
+
+  OVERALL CAVEAT
+    Every value here describes ONE conformation of a flexible molecule. For
+    publication, characterise an ensemble (independent builds or MD frames)
+    and report mean +/- sd.
+
+  Threshold tags:  [lit] = from published work   [conv] = this tool's convention   [!] = caution
+==============================================================================
+  OK  PAMAM        G2  amber_min N=516    term=16   Rg=13.922  Rh_kw=11.198
+
+Wrote 1 rows (1 passed QC) -> output/pamam_g2_characterisation.csv  [117 columns]
+Units reference -> output/pamam_g2_characterisation_units.csv
+Wrote full report -> output/pamam_g2_characterisation.json

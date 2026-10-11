@@ -1,0 +1,118 @@
+property,unit
+source,text
+family,text
+generation,count
+state,text
+input_note,text
+terminal_element,text
+terminal_detection,text
+N_atoms,count
+N_bonds,count
+N_heavy,count
+N_H,count
+MW_Da,Da
+n_term_detected,count
+n_term_theoretical,count
+DB_completeness,
+DB_structural,
+n_dendritic,count
+n_linear,count
+Rg_all_A,Å
+Rg_heavy_A,Å
+R_sphere_A,Å
+diameter_A,Å
+ee_max_A,Å
+ee_mean_A,Å
+asphericity,
+acylindricity,Å²
+kappa2,
+shape_label,text
+SASA_A2,Å²
+SASA_per_term_A2,Å²
+V_sphere_A3,Å³
+V_vdW_mc_A3,Å³
+V_enc_A3,Å³
+void_pct_mc,%
+density_g_cm3,g cm⁻³
+Rh_hardsphere_A,Å
+D_m2s_hardsphere,m² s⁻¹
+s_Sv_hardsphere,S (svedberg)
+eta_iv_hardsphere,dL g⁻¹
+connected,boolean
+n_components,count
+is_tree,boolean
+centre_atom_id,atom index
+bond_min_A,Å
+bond_max_A,Å
+bond_mean_A,Å
+n_bad_bonds,count
+pct_bad_bonds,%
+min_nonbonded_A,Å
+worst_overlap_A,Å
+contacts_lt_2A,count
+core_file,text
+core_n_atoms,count
+core_n_bonds,count
+core_n_heavy,count
+core_leaf_elements,text
+monomer_file,text
+monomer_n_atoms,count
+monomer_n_bonds,count
+monomer_n_heavy,count
+monomer_leaf_elements,text
+I1_amuA2,amu Å²
+I2_amuA2,amu Å²
+I3_amuA2,amu Å²
+I_ratio_I1_I3,
+I_ratio_I2_I3,
+inertia_shape,text
+Rg_axis1_A,Å
+Rg_axis2_A,Å
+Rg_axis3_A,Å
+total_mass_amu,amu
+Rh_kirkwood_A,Å
+Rh_method_diff_pct,%
+D_kirkwood_m2s,m² s⁻¹
+s_kirkwood_Sv,S (svedberg)
+Vh_kirkwood_nm3,nm³
+eta_iv_kirkwood_dLg,dL g⁻¹
+eta_iv_kirkwood_cm3g,cm³ g⁻¹
+V_vdW_grid_A3,Å³
+V_vdW_grid_spacing_A,Å
+n_terminals,count
+R_ref_A,Å
+term_r_mean_A,Å
+term_r_median_A,Å
+term_r_min_A,Å
+term_r_max_A,Å
+term_r_std_A,Å
+terminal_r_norm,
+bf_frac_half_radius_pct,%
+bf_frac_equal_volume_pct,%
+net_charge_e,e
+dipole_eA,e Å
+dipole_Debye,D (debye)
+dipole_origin_independent,boolean
+sum_abs_charge_e,e
+terminal_charge_e,e
+surface_charge_density_e_per_A2,e Å⁻²
+mass_balance_note,text
+QC_PASS,boolean
+rays_kappa,
+quality_meaning,text
+terminal_meaning,text
+Rg_meaning,text
+asphericity_meaning,text
+inertia_meaning,text
+principal_axis_meaning,text
+Rh_meaning,text
+Rh_method_meaning,text
+Rg_Rh_meaning,text
+void_meaning,text
+density_meaning,text
+surface_crowding_meaning,text
+backfolding_meaning,text
+charge_meaning,text
+dipole_meaning,text
+surface_charge_meaning,text
+overall_caveat,text
