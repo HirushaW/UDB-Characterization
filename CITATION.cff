@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use the UDB Characterization Tools, please cite them as below."
+type: software
+title: "UDB Characterization Tools: Structural Characterisation and MOL2 Parameterization Companions to the Universal Dendrimer Builder"
+authors:
+  - family-names: Walgampaya
+    given-names: Hirusha
+license: MIT
+version: 1.0.0
+date-released: 2026-10-11
+repository-code: "https://github.com/HirushaW/UDB-Characterization"
+url: "https://universal-dendrimer-builder-showcas.vercel.app"
+keywords:
+  - dendrimer
+  - molecular modelling
+  - structural characterisation
+  - hydrodynamic radius
+  - MOL2
+  - GAFF2
+  - AMBER
+  - nanoscience
+references:
+  - type: software
+    title: "Universal Dendrimer Builder (UDB): An Open-Source Python Tool for Building, Parameterizing, and Simulating Dendrimer Nanostructures"
+    authors:
+      - family-names: Walgampaya
+        given-names: Hirusha
+    repository-code: "https://github.com/HirushaW/universal-dendrimer-builder"
+    version: 1.0.0

@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install system packages (virtual display for the Tk GUIs)
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt pytest
+
+      - name: Compile
+        run: python -m py_compile udb_characterizer.py dendrimer_param_gui_v2.py
+
+      - name: Tests
+        run: xvfb-run -a python -m pytest -v
+
+      - name: Command-line smoke test on the example
+        run: |
+          cd examples/pamam_g2
+          python ../../udb_characterizer.py input/dendrimer_pamam_gen2_min_gaff.mol2 \
+            --core input/PAMAM_core_typed.mol2 --monomer input/PAMAM_monomer_typed.mol2 \
+            --family PAMAM --gen 2 -o "$RUNNER_TEMP/g2.csv"

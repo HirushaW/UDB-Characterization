@@ -1,0 +1,7 @@
+# Python packages for the UDB Characterization tools.
+# Tkinter comes with Python; on Ubuntu/Debian: sudo apt-get install python3-tk
+# The parameterization GUI also needs AmberTools25 (antechamber, parmchk2,
+# tleap, ParmEd) and, for GROMACS output, acpype -- see README.md.
+numpy
+scipy
+matplotlib
