@@ -45,7 +45,8 @@ First public release of the two companion tools for the Universal Dendrimer Buil
 
 ### Also in this release
 - PAMAM G2 worked example with reference outputs of both tools.
-- Property reference (`docs/PROPERTIES.md`) and parameterization / MOL2 guide.
+- Property reference (`docs/PROPERTIES.md`), parameterization / MOL2 guide, workflow
+  diagram, example-results figure and screenshots of both tools.
 - `pytest` suite and GitHub Actions CI (Python 3.10 and 3.12, GUI test under xvfb).
 - MIT License, citation file and security policy.
 
